@@ -10,5 +10,7 @@ fun main() {
 //    val vetor = arrayListOf(-27, 3, 55, 10, -50, 97, -33, 14, 70)
 
     // exemplo de exercicio
-    println(Exercicios().imprimaVetor(vetor))
+    println(
+        Exercicios().maiorValor(vetor)
+    )
 }
