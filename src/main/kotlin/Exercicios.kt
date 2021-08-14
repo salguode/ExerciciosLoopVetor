@@ -6,7 +6,13 @@ class Exercicios {
 
     fun somaVetor(vetor: ArrayList<Int>): Int {
 
-        return 0
+        var resultado = 0
+
+        for(elemento in vetor){
+            resultado += elemento
+        }
+
+        return resultado
     }
 
     fun calculaMediaAritmetica(vetor: ArrayList<Int>): Double {
