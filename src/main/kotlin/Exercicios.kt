@@ -5,7 +5,6 @@ class Exercicios {
     }
 
     fun somaVetor(vetor: ArrayList<Int>): Int {
-
         var resultado = 0
 
         for(elemento in vetor){
@@ -16,54 +15,31 @@ class Exercicios {
     }
 
     fun calculaMediaAritmetica(vetor: ArrayList<Int>): Double {
-
         var soma: Double = 0.0
-        var media: Double = 0.0
-        var resultado: Double = 0.0
 
         for (elemento in vetor){
-
             soma += elemento
-            media ++
         }
 
-        media = soma / media
-
-        return media
+        return  soma / vetor.size
     }
 
     fun maiorQueVinte(vetor: ArrayList<Int>): String {
+        val media = calculaMediaAritmetica(vetor)
 
-        var soma = 0.0
-        var media = 0.0
-
-        for(elemento in vetor){
-
-            soma += elemento
-            media++
-
-        }
-
-        media = soma / media
-
-        if(media > 20) {
-            return "Valor maior que 20"
+        return if(media > 20) {
+            "Valor maior que 20"
         }else {
-            return "Valor menor ou igual a 20"
+            "Valor menor ou igual a 20"
         }
-
     }
 
     fun maiorValor(vetor: ArrayList<Int>): Int {
-
-        var maiorValor = 0
+        var maiorValor = vetor[0]
 
         for(elemento in vetor){
-
             if (elemento > maiorValor){
-
                 maiorValor = elemento
-
             }
         }
 
@@ -71,53 +47,27 @@ class Exercicios {
     }
 
     fun contarValoresImpares(vetor: ArrayList<Int>): String{
-
         var numerosImpar = 0
 
-
         for(elemento in vetor){
-
             if(elemento % 2 != 0){
-
                 numerosImpar++
-
             }
         }
 
         if(numerosImpar > 0){
-
             return "Quantidade de numeros impares: $numerosImpar"
-
         }else {
-
             return "Nenhum valor ímpar encontrado"
-
         }
-
     }
 
     fun menorValor(vetor: ArrayList<Int>): Int{
-
-        var maiorValor = 0
-        var menorValor = 0
+        var menorValor = vetor[0]
 
         for(elemento in vetor){
-
-            if(elemento > maiorValor){
-
-                maiorValor = elemento
-
-            }
-        }
-
-        menorValor = maiorValor
-
-        for(elemento in vetor){
-
             if(elemento < menorValor){
-
                 menorValor = elemento
-
             }
         }
 
