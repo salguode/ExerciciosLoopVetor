@@ -67,4 +67,24 @@ internal class ExerciciosTest {
         assertEquals(2, exercicios.menorValor(vetor2))
         assertEquals(-50, exercicios.menorValor(vetor3))
     }
+
+    @Test
+    fun trocaPrimeiroComUltimo(){
+        assertEquals("[9, 5, 3, 19, 70, 8, 100, 2, 35, 27]",
+            exercicios.menorValor(vetor1))
+        assertEquals("[50, 4, 44, 180, 32, 86, 500, 2, 12, 6, 98, 100]",
+            exercicios.menorValor(vetor2))
+        assertEquals("[3, -27, 55, 10, -50, 97, -33, 14, 70]",
+            exercicios.menorValor(vetor3))
+    }
+
+    @Test
+    fun ordenarVetor(){
+        assertEquals("[2, 3, 5, 8, 9, 19, 27, 35, 70, 100]",
+            exercicios.menorValor(vetor1))
+        assertEquals("[2, 4, 6, 12, 32, 44, 50, 86, 98, 100, 180, 500]",
+            exercicios.menorValor(vetor2))
+        assertEquals("[-50, -33, -27, 3, 10, 14, 55, 70, 97]",
+            exercicios.menorValor(vetor3))
+    }
 }

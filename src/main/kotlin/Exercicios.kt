@@ -124,4 +124,14 @@ class Exercicios {
         return menorValor
     }
 
+    fun trocaPrimeiroComSegundo(vetor: ArrayList<Int>): String{
+
+        return vetor.toString()
+    }
+
+    fun ordenarVetor(vetor: ArrayList<Int>): String{
+
+        return vetor.toString()
+    }
+
 }
