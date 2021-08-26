@@ -75,13 +75,37 @@ class Exercicios {
     }
 
     fun trocaPrimeiroComSegundo(vetor: ArrayList<Int>): String{
+        var auxiliar = vetor[0]
+
+        vetor[0] = vetor[1]
+        vetor[1] = auxiliar
 
         return vetor.toString()
     }
 
     fun ordenarVetor(vetor: ArrayList<Int>): String{
 
-        return vetor.toString()
+//        val vetorResultado = arrayListOf<Int>()
+//        var menorValor = vetor[0]
+//
+//        for(i in vetor.indices){
+//          for(j in vetor.indices){
+//
+//          }
+//        }
+
+        val vetorResultado = arrayListOf<Int>()
+        var menorValor = vetor[0]
+
+        for(i in vetor.indices){
+            for(j in vetor.indices){
+                if(vetor[i] < vetor[j]){
+
+                }
+            }
+        }
+
+        return vetorResultado.toString()
     }
 
 }

@@ -14,6 +14,6 @@ fun main() {
 
 
     println(
-        Exercicios().menorValor(vetor)
+        Exercicios().ordenarVetor(vetor)
     )
 }
