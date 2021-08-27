@@ -85,24 +85,22 @@ class Exercicios {
 
     fun ordenarVetor(vetor: ArrayList<Int>): String{
 
-//        val vetorResultado = arrayListOf<Int>()
-//        var menorValor = vetor[0]
-//
-//        for(i in vetor.indices){
-//          for(j in vetor.indices){
-//
-//          }
-//        }
-
-        val vetorResultado = arrayListOf<Int>()
-        var menorValor = vetor[0]
+        val vetorResultado = mutableListOf<Int>()
 
         for(i in vetor.indices){
+            var menorIndice = i
+
             for(j in vetor.indices){
-                if(vetor[i] < vetor[j]){
+                if(vetor[j] < vetor[menorIndice] ){
+                    menorIndice = j
 
                 }
             }
+            val auxiliar = vetor[i]
+            vetor[i] = vetor[menorIndice]
+
+            vetor[menorIndice] =  auxiliar
+            vetorResultado.add(vetor[i])
         }
 
         return vetorResultado.toString()
