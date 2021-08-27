@@ -75,7 +75,7 @@ class Exercicios {
     }
 
     fun trocaPrimeiroComSegundo(vetor: ArrayList<Int>): String{
-        var auxiliar = vetor[0]
+        val auxiliar = vetor[0]
 
         vetor[0] = vetor[1]
         vetor[1] = auxiliar
@@ -84,26 +84,21 @@ class Exercicios {
     }
 
     fun ordenarVetor(vetor: ArrayList<Int>): String{
-
-        val vetorResultado = mutableListOf<Int>()
-
         for(i in vetor.indices){
             var menorIndice = i
 
-            for(j in vetor.indices){
+            for(j in i..vetor.lastIndex){
                 if(vetor[j] < vetor[menorIndice] ){
                     menorIndice = j
-
                 }
             }
             val auxiliar = vetor[i]
             vetor[i] = vetor[menorIndice]
 
             vetor[menorIndice] =  auxiliar
-            vetorResultado.add(vetor[i])
         }
 
-        return vetorResultado.toString()
+        return vetor.toString()
     }
 
 }
